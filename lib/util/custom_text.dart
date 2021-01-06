@@ -1,15 +1,23 @@
-
 import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
 
-class CustomText extends StatelessWidget{
+class CustomText extends StatelessWidget {
   final String headLine;
-  final double size;
+  static const double size = 18;
+  static const headLineColor = Colors.black;
+  static const boldFont = FontWeight.bold;
 
-  CustomText({this.headLine, this.size});
+  CustomText({@required this.headLine});
 
   @override
   Widget build(BuildContext context) {
-    return Text(headLine, style: TextStyle(fontSize: size, color: Colors.black),);
+    return Text(
+      headLine,
+      style: TextStyle(
+        fontSize: size,
+        color: headLineColor,
+        fontWeight: boldFont,
+      ),
+    );
   }
-
 }

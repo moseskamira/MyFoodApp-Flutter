@@ -11,13 +11,18 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      headLine,
-      style: TextStyle(
-        fontSize: size,
-        color: headLineColor,
-        fontWeight: boldFont,
-      ),
-    );
+    return RichText(
+        text: TextSpan(
+      children: [
+        TextSpan(
+          text: headLine,
+          style: TextStyle(
+            fontSize: size,
+            color: headLineColor,
+            fontWeight: boldFont,
+          ),
+        ),
+      ],
+    ));
   }
 }

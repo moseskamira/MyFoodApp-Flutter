@@ -15,13 +15,8 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: Text(
-          'Home Screen',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-          ),
+        title: CustomText(headLine:
+          'Home Screen'
         ),
       ),
       body: SafeArea(
@@ -33,27 +28,30 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomText(
-                    headLine: 'What do you want to do ?',
+                    headLine: 'What do you want to do?',
                   ),
                 ),
-                Stack(
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.notifications_none, size: 32,),
-                      onPressed: () {},
-                    ),
-                    Positioned(
-                        top: 8,
-                        right: 12,
-                        child: Container(
-                          height: 8,
-                          width: 8,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        )),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                  child: Stack(
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.notifications_none, size: 32,),
+                        onPressed: () {},
+                      ),
+                      Positioned(
+                          top: 8,
+                          right: 12,
+                          child: Container(
+                            height: 8,
+                            width: 8,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          )),
+                    ],
+                  ),
                 ),
               ],
             ),

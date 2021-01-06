@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        elevation: 0,
         title: Text(
           'Home Screen',
           style: TextStyle(
@@ -33,7 +34,6 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(8.0),
                   child: CustomText(
                     headLine: 'What do you want to do ?',
-                    size: 18,
                   ),
                 ),
                 Stack(
@@ -43,11 +43,11 @@ class _HomeState extends State<Home> {
                       onPressed: () {},
                     ),
                     Positioned(
-                        top: 4,
-                        right: 4,
+                        top: 8,
+                        right: 12,
                         child: Container(
-                          height: 16,
-                          width: 16,
+                          height: 8,
+                          width: 8,
                           decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(8),

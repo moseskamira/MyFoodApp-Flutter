@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomText(
-                    headLine: 'What do you want to do?',
+                    headLine: 'What do you want to do ?',
                     size: 18,
                   ),
                 ),
